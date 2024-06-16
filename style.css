@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+margin: 0
+}
+
+body{
+    background-color:hsl(47, 88%, 63%) ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "FigTree SemiBold";
+}
+#blogPreview{
+    width: 330px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    position: relative;      /*To position the before element*/
+    z-index: 1;
+
+}
+#blogPreview:hover::before{
+   border-right: 10px solid black;
+   border-bottom: 10px solid black;
+}
+#blogPreview::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-right: 8px solid black;
+    border-bottom: 8px solid black;
+    display: block;
+    border-radius: 16px;
+    z-index: -1;
+    position: absolute;
+}
+ #blogMain{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 18px;
+ }
+ .blogImage{
+    width: fit-content;
+ }
+ .blogImage img{
+    width: 100%;
+    border-radius: 10px;
+ }
+ .blogContent{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+ .blogInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ .blogLearn{
+    font-size: 12px;
+    background-color:hsl(47, 88%, 63%);
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+ }
+ .blogDate{
+    font-size: 13px;
+ }
+ .blogText{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+ }
+ .blogHeader{
+    font-size: 20px;
+ }
+ .blogHeader:hover{
+    color:hsl(47, 88%, 63%);
+    cursor: pointer;
+    transition: 0.2s all;
+ }
+ .blogParagraph{
+    font-size: 13px;
+    line-height: 20px;
+    font-family: "FigTree Regular";
+    color: hsl(0, 0%, 50%);
+ }
+ .blogAuthor{
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+ }
+ .blogAuthor img{
+    width: 25%;
+ }
+ .authorName{
+    font-size: 12px;
+ }
+ .bold{
+    font-family: "FigTree ExtraBold";
+    color: hsl(0, 0%, 7%);
+ }
